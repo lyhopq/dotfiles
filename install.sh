@@ -13,9 +13,18 @@ link() {
 home() {
   for location in $(find home -maxdepth 1 -name '.*'); do
     file="${location##*/}"
-    file="${file%.sh}"
+    file="${file%}"
     link "$dotfiles/$location" "$HOME/$file"
   done
 }
 
+vim() {
+  rm -rf ~/.vim
+  cd ~
+  sh .vim-plugin-install.sh
+  cd $dotfiles
+  pwd
+}
+
 home
+vim

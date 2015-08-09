@@ -1,0 +1,12 @@
+[submodule "home/.vim/emmet-vim"]
+	path = home/.vim/emmet-vim
+	url = https://github.com/mattn/emmet-vim.git
+[submodule "home/.vim/molokai"]
+	path = home/.vim/molokai
+	url = https://github.com/vim-scripts/molokai.git
+[submodule "home/.vim/bundle/molokai"]
+	path = home/.vim/bundle/molokai
+	url = https://github.com/vim-scripts/molokai.git
+[submodule "home/.vim/bundle/emmet-vim"]
+	path = home/.vim/bundle/emmet-vim
+	url = https://github.com/mattn/emmet-vim.git
