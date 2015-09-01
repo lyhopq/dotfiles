@@ -17,7 +17,6 @@
      ;; Uncomment some layer names and press <SPC f e R> (Vim style) or
      ;; <M-m f e R> (Emacs style) to install them.
      ;; ----------------------------------------------------------------
-     auto-completion
      better-defaults
      emacs-lisp
      git
@@ -33,8 +32,13 @@
      editorconfig
      themes-megapack
      perspectives
+     semantic
      (python :variables python-enable-yapf-format-on-save t
              python-test-runner 'pytest)
+
+     (c-c++ :variables
+            c-c++-default-mode-for-headers 'c++-mode
+            c-c++-enable-clang-support t)
 
      (shell :variables
              shell-default-shell 'eshell
@@ -187,6 +191,13 @@ layers configuration."
   (set-selection-coding-system 'utf-8)
   (prefer-coding-system 'utf-8)
   (set-language-environment 'utf-8)
+
+  ;; Bind clang-format-region to C-M-tab in all modes:
+  (global-set-key [C-M-tab] 'clang-format-region)
+  ;; Bind clang-format-buffer to tab on the c++-mode only:
+  (add-hook 'c++-mode-hook 'clang-format-bindings)
+  (defun clang-format-bindings ()
+    (define-key c++-mode-map [tab] 'clang-format-buffer))
 )
 
 ;; Do not write anything past this comment. This is where Emacs will

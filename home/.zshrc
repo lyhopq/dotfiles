@@ -58,6 +58,7 @@ export EDITOR="vim"
 export LANG="en_US.UTF-8"
 
 #set -o vi
+alias emacs='LC_CTYPE="zh_CN.UTF-8" emacs'
 alias goagent="python2 ~/Works/goagent/local/proxy.py &"
 alias lt="~/Works/LightTable/deploy/LightTable &"
 alias today='date +"%A, %B %-d, %Y"'
