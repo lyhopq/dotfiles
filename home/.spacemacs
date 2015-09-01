@@ -33,6 +33,7 @@
      themes-megapack
      perspectives
      semantic
+     gtags
      (python :variables python-enable-yapf-format-on-save t
              python-test-runner 'pytest)
 
