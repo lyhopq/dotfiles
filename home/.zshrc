@@ -1,16 +1,16 @@
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
 
-export _Z_DATA=$HOME/.z/db
-. /home/lyh/.z/z.sh
+#export _Z_DATA=$HOME/.z/db
+#. /home/lyh/.z/z.sh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-#ZSH_THEME="robbyrussell"
+ZSH_THEME="robbyrussell"
 #ZSH_THEME="agnoster"
-ZSH_THEME="bira"
+#ZSH_THEME="bira"
 #ZSH_THEME="aussiegeek"
 #ZSH_THEME="cloud"
 #ZSH_THEME="gnzh"
@@ -70,6 +70,11 @@ alias panpdf="pandoc --template=$HOME/.pandoc/template.tex --latex-engine=xelate
 alias pynb='ipython notebook --profile=lyh'
 
 alias ariac="aria2c --enable-rpc --rpc-listen-all && chromium /opt/webui-aria2/index.html"
+
+alias cnpm="npm --registry=https://registry.npm.taobao.org \
+--cache=$HOME/.npm/.cache/cnpm \
+--disturl=https://npm.taobao.org/dist \
+--userconfig=$HOME/.cnpmrc"
 
 alias vi='vim'
 alias e='vim'
