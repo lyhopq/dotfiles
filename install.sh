@@ -32,4 +32,3 @@ emacs() {
 
 home
 vim
-emacs

@@ -46,10 +46,10 @@ source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
 # export LC_ALL=C
-export BLOG=~/Works/gor/lyhopq.com
-export GOPATH=~/Works/go
-export GOROOT=/usr/lib/go
-export PATH=/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:~/.local/bin:$GOPATH/bin:/opt/java/bin:~/.mongodb/bin
+export GOROOT=~/.local/go
+export GOBIN=$GOROOT/bin
+export GOPATH=~/Works/Go
+export PATH=/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:~/.local/bin:$GOBIN:~/.mongodb/bin
 
 export PAGER='/usr/bin/less -s'
 export BROWSER='/usr/bin/less -s'
